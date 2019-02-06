@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Buttons</title>
+
+	<style>
+
+	*, *::before, *::after {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	}
+
+	html {
+		font-size: 62.5%;
+	}
+
+	body {
+		font-size: 1.4rem;
+	}
+
+	.button-box {
+		min-width: 47em;
+		max-width: 47em;
+		height: 17em;
+		display: flex;
+		align-items: center;
+		margin: 5em auto;
+		background-color: #ededed;
+		flex-wrap: wrap;
+		padding: 1em 8em;
+		justify-content: space-around;
+	}
+
+	.btn {
+		display: inline-block;
+		font: 1.4rem "Tahoma", sans-serif;
+		border: 1px solid;
+		border-radius: 0.6em; 
+		text-decoration: none;
+		justify-content: space-between;
+		text-align: center;
+		vertical-align: baseline;
+		user-select: none;
+		color: #fff;
+		background-color: transparent;
+		box-shadow: 0.1em 0.1em 0.1em 0 #cbcbcb;
+
+		padding: 1em 3em;
+	}
+
+	.btn:focus,
+	.btn--span:focus {
+		font-size: 1.6rem;
+		box-shadow: 0.3em 0.3em 0.3em 0 #9694f2;
+	}
+
+	.btn--span:focus {
+		font-size: 1.6rem;
+		box-shadow: 0.3em 0.3em 0.3em 0 #9694f2;
+	}
+
+	.btn:active {
+		color: #6d6c77;
+	}
+
+	.btn:hover {
+   		 background-color: #4db325; /*не работает с первым инпутом*/
+	}
+
+	.inp--first {
+		background-image: linear-gradient(to bottom, #323232, #020202); /*не работает, не знаю, почему*/
+		border-color: #333333;
+	}
+
+	.inp--second {
+		background: #737373;
+		border-color: #555555;
+	}
+
+	.res--first {
+		background: #f7f7f7;
+		border-color: #b6b6b6;
+		color: #6a605e;
+	}
+
+	.res--second {
+		background: #f88f00;
+		border-color: #d97d00;
+	}
+
+	.res--third {
+		background: #007ead;
+		border-color: #007aa3;
+	}
+
+	.btn--first {
+		background: #6d9b04;
+		border-color: #598003;
+		
+	}
+	
+	.btn--second {
+		background: #cb2316;
+		border-color: #98130e;
+	
+	}
+
+	.btn--a {
+		background: #e56671;
+		border-color: #b73c4e;
+		padding-top: 0.8em;
+	}
+
+	.btn--span {
+		background: #f79ac6;
+		border-color: #d07499;
+		padding-top: 0.8em;
+	}
+
+	.btn--lrg:hover {
+		font-size: 1.8rem;
+		padding: 1.5em 3.5em;
+	}
+
+	.btn--sml:hover {
+		font-size: 1.2rem;
+		padding: 0.5em 1.5em;
+	}
+
+
+	</style>
+</head>
+<body>
+
+	<div class="button-box">
+
+		<input class="btn inp--first" type="button" value="Button">
+		<input class="btn inp--second" type="button" value="Button">
+		<input class="btn res--first" type="reset" value="Button">
+		<input class="btn res--second" type="reset" value="Button">
+		<input class="btn res--third btn--lrg" type="reset" value="Button">
+		<button class="btn btn--first">Button</button>
+		<button class="btn btn--second">Button</button>
+		<a class="btn btn--a btn--sml" href="#">Button</a>
+		<span class="btn btn--span" tabindex="2">Button</span><!--не работает с TAB-->
+
+	</div>
+	
+</body>
+</html>
