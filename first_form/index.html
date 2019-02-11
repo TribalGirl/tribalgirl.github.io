@@ -14,35 +14,35 @@
 		}
 
 		body {
-			font-size: 10px; /*оставила 1.6rem, получилась какая-то фигня с размерами.*/
+			font-size:1.6rem;
 			color: #7e7975;
 			margin: 0;
 			padding: 20em;
 		}
 
 		.form__box {
-			max-width: 60em;
-			max-height: 34em;
+			max-width: 60rem;
+			max-height: 34rem;
 			margin: 0 auto;
-			padding: 5em 10em 8em;
+			padding: 5rem 10em 8rem;
 
-			background: url(images/pattern-wood.jpg) center/cover;
+			background: url(images/pattern-wood.jpg) repeat;
 		}
 
 		.form__background {
 			background-color: #e6caaf; /* если так #fff; и opacity: 0.3; то не задать цвет форме, z-index не работает, видимо, из-за наложения, так что пока сделала так*/
-			
-			padding: 1em 0.5em 1em;
-			border-radius: 0.5em;
+			background: rgba(255,255.255,0.5);
+			padding: 1rem 0.5rem 1rem;
+			border-radius: 0.5rem;
 		}
 
 		
 		
 		.form {
 			max-width: 100%;
-			max-height: 20em;
+			max-height: 20rem;
 			margin: 0;
-			border-radius: 0.4em;
+			border-radius: 0.4rem;
 			background-color: #fffaf6;
 			box-shadow: 0 0.1em 0 0 rgba(192,169,151,0.5); /*смотреть*/
 		}
@@ -50,7 +50,7 @@
 		.fieldset {
 			border: 0;
 			margin: 0;
-			padding: 0 1.5em;
+			padding: 0 1.5rem;
 			display: flex;
 			position: relative;
 		}
@@ -58,7 +58,7 @@
 		.form__legend {
 			width: 100%;
 			display: block;
-			padding: 1em 1.5em 1em 0;
+			padding: 1em 1.5rem 1em 0;
 			margin: 0;
 			text-align: left;
 			color: #c7b5aa;
@@ -71,7 +71,7 @@
 			content: "";
 			display: block;
 			width: 100%;
-			height: 0.2em;
+			height: 0.2rem;
 			color: #fff;
 
 			position: absolute;
@@ -91,9 +91,9 @@
 		}
 
 		.form__group  {
-			margin: 2em 0 1em;
-			width: 1.5em;
-			height: 5em;
+			margin: 2rem 0 1em;
+			width: 1.5rem;
+			height: 5rem;
 
 			
 			position: absolute;
@@ -111,13 +111,13 @@
 		.form__label {
 			display: block;
 			text-transform: uppercase;
-			margin-bottom: 0.8em;
+			margin-bottom: 0.8rem;
 		}
 
 		.user,
 		.pass {
 			position: relative;
-			padding-left: 1.8em;
+			padding-left: 1.8rem;
 		}
 
 		.user::before,
@@ -151,15 +151,15 @@
 
 			display: block;
 
-			max-width: 15em;
-			height: 2.5em;
+			max-width: 15rem;
+			height: 2.5rem;
 
-			padding-left: 0.4em;
+			padding-left: 0.4rem;
 			vertical-align: middle;
 
 			background: #fff;
-			border: 0.3em solid #ebe6e2;
-			border-radius: 0.5em;
+			border: 0.3rem solid #ebe6e2;
+			border-radius: 0.5rem;
 		}
 
 		/*.form__control:required {
@@ -192,8 +192,8 @@
 			position: absolute;
 			display: block;
 			content: " ";
-			width: 1.3em;
-			height: 1.3em;
+			width: 1.3rem;
+			height: 1.3rem;
 			background: #fff;
 			border: 1px solid #707070;
 			left: -30%;
@@ -216,25 +216,32 @@
 		}
 
 		.form__actions {
-			margin: 10em 1.5em 1.5em;
-			padding-top: 0.5em;
-			padding-bottom: 1em;
+			margin: 10rm 1.5em 1.5rem;
+			padding-top: 0.5rem;
+			padding-bottom: 1rem;
 
 			display: flex;
 		}
 
 		.btn {
-			width: 15em;
-			height: 4em;
+			width: 15rem;
+			height: 4rem;
 
-			display: block;
-
-			padding: 1.2em 1.7em;
+			display: inline-block;
+			vertical-align: middle;
+			outline: none;
+			border: 0;
+			background: transparent;
+			line-height: 1;
+			font-size: inherit;
 			font-family: inherit;
+			text-align: center;
+
+			padding: 1.2rem 1.7rem;
 			color: #fff;
 			font-weight: bold;
 			border: 1px solid;
-			border-radius: 0.3em;
+			border-radius: 0.3rem;
 			background: linear-gradient;
 
 		}
@@ -257,7 +264,7 @@
 			font-size: 1.2rem;
 			align-items: center;
 			text-align: center;
-			margin-right: 0.2em;
+			margin-right: 0.2rem;
 
 		}
 
@@ -265,7 +272,7 @@
 			font-size: 1.2rem;
 			background-color: #fdc356;
 			color: #996343;
-			margin-left: 0.2em;
+			margin-left: 0.2rem;
 		}
 
 
