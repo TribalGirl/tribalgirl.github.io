@@ -2,15 +2,14 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name=“viewport” content=“width=device-width, initial-scale=1”>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Second_form</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&amp;subset=cyrillic" rel="stylesheet">
 
 	<style>
 
 	*,*::before,*::after {
-		-webkit-box-sizing: border-box;
-		        box-sizing: border-box;
+		-webkit-box-sizing: border-box;box-sizing: border-box;
 	}
 
 	html {
@@ -131,10 +130,12 @@
 
 	.form__control:focuse {
 		border-top: 0.3rem solid #dcf8ca;
+
 	}
 
 	.form__control:active {
 		font-size: 0rem;
+		
 	}
 
 	.form__label {
@@ -242,7 +243,7 @@
 
 		position: relative;
 
-		opacity: 0.6;
+		opacity: 0.4;
 
 	}
 
@@ -270,10 +271,22 @@
 		height: 5rem;
 	}
 
-	button {
-		text-transform: uppercase;
-		border: 0;
+	.button {
 
+		display: inline-block;
+		vertical-align: middle;
+		outline: none;
+		border: 0;
+		background: transparent;
+		line-height: 1;
+		/* font-size: inherit;*/
+		font-family: inherit;
+		text-align: center;
+
+		/*---вот так---*/
+
+		text-transform: uppercase;
+		
 		width: 19rem;
 		height: 5rem;
 		border-radius: 5em;
@@ -289,18 +302,22 @@
 
 	}
 
-	button:focuse {
-		border: 0.2rem solid #e0ee83;
+	.button:focuse {
+		/*border: 0.2rem solid #e0ee83;
+		border-radius: 0.5em;*/
+		border: none;
 		color: #e0ee83;
 	}
 
-	button:active {
+	.button:active {
 		background: #5c9f32;
+		border: none;
 	} 
 
-	button:hover {
+	.button:hover {
 		background: #5c9f32;
 		color: #dcf8ca;
+		border: none;
 	}
 
 
@@ -470,7 +487,7 @@
 			</div>
 
 			<div class="form__actions enter" tabindex="1">
-				<button>Вход</button>
+				<button class="button">Вход</button>
 			</div><!--enter-->
 			<p class="social--text">Или зарегистрируйтесь через</p>
 			<div class="form__actions socials">
