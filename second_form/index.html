@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name=“viewport” content=“width=device-width, initial-scale=1”>
+	<title>Second_form</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+
+	<style>
+
+	*,*::before,*::after {
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+
+	html {
+		font-size: 62.5%;
+	}
+
+	body {
+		font-size: 1.6rem;
+		font-family: 'Open Sans', sans-serif;
+		background: #c1c9d2;
+	}
+
+	main {
+		position: relative;
+
+		max-width: 86rem;
+		max-height: 62rem;
+
+		background-color: #fff;
+
+		margin: 5rem auto;
+		padding-top: 8rem;
+		padding-bottom: 3rem;
+	}
+
+	main::before {
+		position: absolute;
+		content: " ";
+		
+		width: 100%;
+		height: 0.1rem;
+
+		background-color: #242832;
+
+		top:0;
+		left:0;
+	}
+
+	.logo {
+		margin: 0 auto;
+		width: 19.6rem;
+		height: 4.2rem;
+		background: url(images/clickmeeting-logo.png) center/contain;
+		overflow: hidden;
+	}
+
+	.form {
+		max-width: 69rem;
+		margin: 2.8rem auto 7rem;
+	}
+
+	.form__fieldset {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			min-width: 0;
+		}
+
+	.form__legend {
+		font-size: 3.8rem;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.cover {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+
+	.form__group {
+		width: /*47,8261%;*/33rem;
+		height: 3rem;
+
+		margin: 5.7rem 0 1rem;
+		border:0;
+		position: relative;
+	}
+
+	/*.form__group::before {
+		position: absolute;
+		content: " ";
+		
+		width: 1.5rem;
+		height: 1.5rem;
+
+		background: url(images/icon-plane.png) center/cover;
+
+		bottom: 10%;
+		left:0;
+
+		z-index: 10;
+	}
+
+	 /* .password__icon .form__group::before {
+		background: url(images/icon-key.png) center/cover;
+	}*/
+
+
+
+	.form__group::after {
+		position: absolute;
+		content: " ";
+		
+		width: 100%;
+		height: 0.1rem;
+
+		background-color: #dedede;
+
+		bottom: -30%;
+		left:0;
+	}
+
+	.form__control:focuse {
+		border-top: 0.3rem solid #dcf8ca;
+	}
+
+	.form__control:active {
+		font-size: 0rem;
+	}
+
+	.form__label {
+		
+		display: none;
+
+		/*width: 1.5rem;
+		height: 1.5rem;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		background: url(images/icon-plane.png) center/cover;*/
+
+		/*position: absolute;*/
+		position: relative;
+		
+
+	}
+
+	.password__icon::before {
+		position: absolute;
+		content: " ";
+		
+		width: 1.5rem;
+		height: 1.5rem;
+
+		background: url(images/icon-key.png) center/cover;
+
+		top: 40%;
+		left:0;
+
+		z-index: 10;
+	}
+
+	.name__icon::before {
+		position: absolute;
+		content: " ";
+		
+		width: 1.5rem;
+		height: 1.5rem;
+
+		background: url(images/icon-plane.png) center/cover;
+
+		top: 35%;
+		left:0;
+
+		z-index: 10;
+	}
+/*------------ТУТ ШЛА ЖЕСТОЧАЙШАЯ БОРЬБА---------------*/
+	/*.form__label::after .user__password {
+		background: url(images/icon-key.png) center/cover;
+	}
+	
+
+	/*.user__name {
+		background: url(images/icon-plane.png) center/cover;
+	}
+
+	.user__password {
+		background: url(images/icon-key.png) center/cover;
+	}*/
+
+	/*.form__label .user__password  {
+		background-image: url(images/icon-key.png);
+	}
+
+	.form__control::before {
+		position: absolute;
+		content: " ";
+		display: block;
+		
+		width: 1.5rem;
+		height: 1.5rem;
+		top:0;
+		left: 0;
+
+		background-image: url(images/icon-plane.png)/* center/cover;
+	}
+
+	.form__control::before:first-child {
+		background: url(images/icon-plane.png) center/cover;
+	}
+
+	.form__control::before:lastt-child {
+		background: url(images/icon-key.png) center/cover;
+	}*/
+	
+
+	.form__control {
+
+		display: block;
+		width: /*87,8788%;*/100%;
+		outline: none;
+		overflow: auto;
+		border: 0;
+
+		color: #e8dfe0;
+
+		font-family: inherit;
+		font-size: 1.4rem;
+		padding-left: 3rem;
+		margin-bottom: 1rem;
+		max-width: 100%;
+		min-width: 100%;
+
+		position: relative;
+
+		opacity: 0.6;
+
+	}
+
+	.forget {
+		width: 100%;
+
+		/*margin-top: 0.5rem;*/
+		margin-bottom: 3rem;
+
+		text-align: right;
+	}
+
+	.forget--text {
+		font-size: 1.1rem;
+		text-decoration: none;
+		color: #00afec;
+	}
+
+	.forget--text:hover {
+		color: #a3e0ff;
+	}
+
+	.enter {
+		width: 20rem;
+		height: 5rem;
+	}
+
+	button {
+
+		/*--всем кнопкам нужно задавать следующие стили--*/
+
+		display: inline-block;
+		vertical-align: middle;
+		outline: none;
+		border: 0;
+		background: transparent;
+		line-height: 1;
+		/* font-size: inherit;*/
+		font-family: inherit;
+		text-align: center;
+
+		/*---вот так---*/
+
+		text-transform: uppercase;
+		
+
+		width: 19rem;
+		height: 5rem;
+		border-radius: 5em;
+
+		font-size: 1.8rem;
+		font-weight: bold;
+		color: #fff;
+		background: #74c541;
+
+		-webkit-box-shadow: inset 0 -0.2rem 0.4rem rgba(0,0,0,0.5);
+
+		        box-shadow: inset 0 -0.2rem 0.4rem rgba(0,0,0,0.5); 
+
+	}
+
+	button:focuse {
+		border: 0.2rem solid #e0ee83;
+		color: #e0ee83;
+	}
+
+	button:active {
+		background: #5c9f32;
+	} 
+
+	button:hover {
+		background: #5c9f32;
+		color: #dcf8ca;
+	}
+
+
+	.form__actions {
+		text-decoration: none;
+		text-transform: uppercase;
+		margin: 0 auto;
+
+	}
+
+	.social--text {
+		display: block;
+		margin: 2.5rem auto;
+		font-size: 1.2rem;
+		color: #a7afc6;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.socials {
+		width: 42rem;
+
+		display: -webkit-box;
+
+		display: -webkit-flex;
+
+		display: -ms-flexbox;
+
+		display: flex;
+		-webkit-justify-content: space-around;
+		    -ms-flex-pack: distribute;
+		        justify-content: space-around;
+		margin: 0 auto;
+	}
+
+	.social--btn {
+
+		display: block;
+		text-transform: uppercase;
+		border-radius: 0.5rem;
+		text-decoration: none;
+
+		text-align: center;
+
+		font-size: 1.2rem;
+		width: 40%;
+
+		padding: 0.8rem 1.8rem;
+		border: 1px solid #f0473a;
+		border-radius: 5rem;
+		color: #f0473a;
+
+		margin: 0 1rem;
+
+		position: relative;
+	}
+	
+	.social--btn::before {
+		position: absolute;
+		content: " ";
+		
+		width: 1.3rem;
+		height: 1.3rem;
+
+		overflow: hidden;
+
+		top: 30%;
+		left: 10%;
+
+		/*z-index: 10;*/
+	}
+
+	.facebook {
+		
+		border-color: #4c6aad;
+		color: #4c6aad;
+	}
+	
+	.facebook::before {
+		top: 18%;
+		left: 8%;
+		width: 2rem;
+		height: 2rem;
+		background: url(images/Facebook.png) center/cover;
+	}
+
+	.google::before {
+		background: url(images/gg.png) center/cover;
+	}
+
+	.office::before {
+		background: url(images/Office-icon.png) center/cover;
+	}
+
+	.social--btn:active {
+		-webkit-box-shadow: inset 0 -0.2rem 0.4rem rgba(0,0,0,0.5);
+		        box-shadow: inset 0 -0.2rem 0.4rem rgba(0,0,0,0.5); 
+	}
+
+	.social--btn:focuse {
+		border: 1px solid #74c541;
+	}
+
+	.social--btn:hover {
+		-webkit-box-shadow: inset 0 -0.2rem 0.4rem rgba(0,0,0,0.5);
+		        box-shadow: inset 0 -0.2rem 0.4rem rgba(0,0,0,0.5); 
+		opacity: 0.4;
+		
+	}
+
+	.free {
+		margin: 0 auto 3rem;
+		width: 100%;
+		white-space: nowrap;
+		text-align: center;
+	}
+
+	
+
+	.free--text {
+		/*display: block;*/
+		padding: 0;
+		margin: 0 auto;
+		font-size: 1.4rem;
+		text-decoration: none;
+		color:  #00afec;
+	}
+	.grey {
+		
+		color: #a7afc6;
+	}
+
+	.free--text:hover a {
+		color: #a3e0ff; 
+	}
+
+	</style>
+</head>
+<body>
+	<main>
+		
+		<div class="logo">
+			
+		</div><!--logo-->
+
+
+		<form action="" class="form">
+			<fieldset class="form__fieldset">
+			<legend  class="form__legend">Войдите в учетную запись</legend>
+
+			<div class="cover">
+
+				<div class="form__group name__icon">
+					<label for="name" class="form__label .user__name"></label>
+					<input class="form__control" type="text" id="name" placeholder="Имя пользователя или адрес эл. почты" required  tabindex="1">
+				</div>
+
+				<div class="form__group password__icon">
+					<label for="password" class="form__label .user__password"></label>
+					<input class="form__control" type="text" id="password" placeholder="Пароль" required tabindex="1">
+				</div>
+
+			</div><!--cover-->
+
+			<div class="forget">
+				<a class="forget--text" href="#">Забыли пароль?</a>
+			</div>
+
+			<div class="form__actions enter" tabindex="1">
+				<button>Вход</button>
+			</div><!--enter-->
+			<p class="social--text">Или зарегистрируйтесь через</p>
+			<div class="form__actions socials">
+				<a class="social--btn facebook" href="#" tabindex="1">facebook</a>
+				<a class="social--btn google" href="#" tabindex="1">google</a>
+				<a class="social--btn office" href="#" tabindex="1">office 365</a>
+			</div><!--enter-->
+
+			</fieldset>
+		</form>
+
+		<div class="free">
+			<p class="free--text grey">Нет учетной записи?<a  class="free--text" href="#"> Воспользуйтесь бесплатной 30-дневной пробной версией!</a></p>
+		</div>
+		
+	</main>
+	
+</body>
+</html>
