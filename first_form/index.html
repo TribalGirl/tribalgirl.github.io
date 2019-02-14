@@ -2,56 +2,62 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name=“viewport” content=“width=device-width, initial-scale=1”>
 	<title>form_first</title>
+	<link rel="stylesheet" href="normalize.css">
 
 	<style>
+		
 		*,*::before,*::after {
-			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			        box-sizing: border-box;
 		}
 
 		html {
 			font-size: 62.5%;
 		}
-
 		body {
 			font-size:1.6rem;
 			color: #7e7975;
 			margin: 0;
-			padding: 20em;
 		}
 
 		.form__box {
 			max-width: 60rem;
-			max-height: 34rem;
+			/*max-height: 34rem;*/
 			margin: 0 auto;
-			padding: 5rem 10em 8rem;
-
+			padding: 5rem 0;
 			background: url(images/pattern-wood.jpg) repeat;
+			
 		}
 
 		.form__background {
-			background-color: #e6caaf; /* если так #fff; и opacity: 0.3; то не задать цвет форме, z-index не работает, видимо, из-за наложения, так что пока сделала так*/
-			background: rgba(255,255.255,0.5);
+			width: 38rem;
+			background: rgba(255,255,255,0.4);
 			padding: 1rem 0.5rem 1rem;
 			border-radius: 0.5rem;
+			margin: 0 auto;
+			align-content: center;
 		}
 
-		
-		
 		.form {
-			max-width: 100%;
-			max-height: 20rem;
-			margin: 0;
+			width: 34rem;
+			/*max-height: 22rem;*/
+			margin: 0 auto;
 			border-radius: 0.4rem;
 			background-color: #fffaf6;
-			box-shadow: 0 0.1em 0 0 rgba(192,169,151,0.5); /*смотреть*/
+			-webkit-box-shadow: 0 0.1em 0 0 rgba(192,169,151,0.5);
+			        box-shadow: 0 0.1em 0 0 rgba(192,169,151,0.5); 
+			-webkit-align-self: auto; 
+			    -ms-flex-item-align: auto; 
+			            -ms-grid-row-align: auto; 
+			        align-self: auto;
 		}
 
 		.fieldset {
 			border: 0;
 			margin: 0;
-			padding: 0 1.5rem;
-			display: flex;
+			padding: 0 1.5rem 2rem;
 			position: relative;
 		}
 
@@ -67,51 +73,50 @@
 		}
 
 		.form__legend::after {
-
 			content: "";
 			display: block;
 			width: 100%;
 			height: 0.2rem;
 			color: #fff;
-
 			position: absolute;
 			bottom: -4%;
 			left:0;
-
 		}
-
 		span {
 			text-transform: uppercase;
 			color: #6c676e;
 		}
-
 		span a {
 			color: #ffb347;
 			text-decoration: none;
 		}
 
+		.box {
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-pack: justify;
+			-webkit-justify-content: space-between;
+			    -ms-flex-pack: justify;
+			        justify-content: space-between;
+		}
+		
 		.form__group  {
-			margin: 2rem 0 1em;
-			width: 1.5rem;
+			margin: 1.5rem 0 1em;
+			width: 48.3871%;
 			height: 5rem;
-
-			
-			position: absolute;
-			top: 100%;
-		}
-
-		.left {
-			left: 4%;
-		}
-
-		.right {
-			right: 45%;
 		}
 
 		.form__label {
 			display: block;
 			text-transform: uppercase;
 			margin-bottom: 0.8rem;
+			padding-left: 0.5rem;
+		}
+
+		.form__label {
+			font-size: 1.4rem;
 		}
 
 		.user,
@@ -119,73 +124,83 @@
 			position: relative;
 			padding-left: 1.8rem;
 		}
-
 		.user::before,
 		.pass::before {
 			position: absolute;
 			content: "";
-			top: 0;
-			left: 3%;
-			width: 1em;
-			height: 1em;
+			top: 20%;
+			left: 0;
+			width: 0.8em;
+			height: 0.8em;
 		}
-
 		.user::before {
 			background: url(images/icon-user.png) center/cover;
+			top: 10%;
 		}
-
 		.pass::before {
-
 			background: url(images/icon-lock.png) center/cover;
 		}
-
 		.form__input {
 			font-family: inherit;
 		}
 
 		.form__control {
+			display: block;
+			width: 15rem;
 
 			font-family: inherit;
-
 			margin: 0;
-
 			display: block;
-
 			max-width: 15rem;
 			height: 2.5rem;
-
 			padding-left: 0.4rem;
 			vertical-align: middle;
-
 			background: #fff;
 			border: 0.3rem solid #ebe6e2;
 			border-radius: 0.5rem;
 		}
 
-		/*.form__control:required {
-			background: #efc1ae;
-		} если я правильно понимаю, если я хочу, чтобы пустое поле ввода, обязательное для заполнения, выделялось цветом не постоянно, а только когда оно не заполнено, то это кодируется в JS? */
+		.form__control::-webkit-input-placeholder {
+			font-family: inherit;
+			font-size: 1.4rem;
+		}
+
+		.form__control:-ms-input-placeholder {
+			font-family: inherit;
+			font-size: 1.4rem;
+		}
+
+		.form__control::-ms-input-placeholder {
+			font-family: inherit;
+			font-size: 1.4rem;
+		}
+
+		.form__control::placeholder {
+			font-family: inherit;
+			font-size: 1.4rem;
+		}
 
 		.form__control:focus {
 			border-color: #319ecc;
 			
 		}
-
 		.form__control:active {
 			background: #f5b938;
-
 		}
 
 		.password__checkbox {
-			position: absolute;
-			bottom: -300%;
-			right: 3%;
-			z-index: 1;
-
+			text-align: right;
+			padding-bottom: 0.5rem;
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			    -ms-flex-align: center;
+			        align-items: center;
 		}
 
 		.password__show {
 			font-family: inherit;
+			position: relative;
+			font-size: 1.4rem;
 		}
 
 		.password__show::before {
@@ -196,17 +211,18 @@
 			height: 1.3rem;
 			background: #fff;
 			border: 1px solid #707070;
-			left: -30%;
-			top: -5%;
-			z-index: 2; /*все равно */
+			left: -20%;
+			top: 8%;
+			z-index: 2;
 		}
 
 		.password__show::before:action {
-			box-shadow: 0 0.1em 0 0 rgba(192,169,151,0.5);
+			-webkit-box-shadow: 0 0.1em 0 0 rgba(192,169,151,0.5);
+			        box-shadow: 0 0.1em 0 0 rgba(192,169,151,0.5);
 		}
-
 		.password__show::before:hover {
 			background: #707070;
+			left:50%;
 		}
 
 		.input__show {
@@ -215,17 +231,7 @@
     		z-index: -1;
 		}
 
-		.form__actions {
-			margin: 10rm 1.5em 1.5rem;
-			padding-top: 0.5rem;
-			padding-bottom: 1rem;
-
-			display: flex;
-		}
-
 		.btn {
-			width: 15rem;
-			height: 4rem;
 
 			display: inline-block;
 			vertical-align: middle;
@@ -236,24 +242,23 @@
 			font-size: inherit;
 			font-family: inherit;
 			text-align: center;
-
+			width: 15rem;
+			height: 4rem;
 			padding: 1.2rem 1.7rem;
 			color: #fff;
 			font-weight: bold;
 			border: 1px solid;
 			border-radius: 0.3rem;
 			background: linear-gradient;
-
 		}
 		
 		.btn:focuse	{
-				box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.5);
+				-webkit-box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.5);
+				        box-shadow: inset 0 0.1em 0.1em rgba(0,0,0,.5);
 		}
-
 		.btn:active {
 			background: #bebebe;
 		}
-
 		.btn:hover {
 			color: #ffb347;
 		}
@@ -262,12 +267,13 @@
 			background-color: #319ecc;
 			text-decoration: none;
 			font-size: 1.2rem;
-			align-items: center;
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			    -ms-flex-align: center;
+			        align-items: center;
 			text-align: center;
 			margin-right: 0.2rem;
-
 		}
-
 		.login {
 			font-size: 1.2rem;
 			background-color: #fdc356;
@@ -275,10 +281,62 @@
 			margin-left: 0.2rem;
 		}
 
+		/*------------------MEDIA---------------------*/
 
+		@media screen and (max-width: 370px) {
+  				.form__box {
+  					height: 34rem;
+  					padding: 0.3rem;
+  				}
 
-		
+  				.form__background {
+  					width: 24rem;
+  					height: 32rem;
+  					padding: 0.3rem 0.2rem;
+  				}
 
+  				.form {
+  					margin: 0 auto;
+  					width: 20rem;
+  					height: 30rem;
+  				}
+
+  				.fieldset {
+  					height: 30rem;
+  				}
+
+  				.form__legend {
+  					padding: 1rem 1rem 1rem 0;
+  				}
+
+  				span {
+  					font-size: 1.4rem;
+  				}
+
+  				.box {
+  					display: block;
+  					margin: 0.5rem;
+  				}
+  				.form__group  {
+					margin: 0.8rem 0 0.5rem;
+					width: 48.3871%;
+					height: 5rem;
+				}
+
+				.btn {
+  					padding: 1rem 1.4rem;
+  					margin-bottom: 0.3rem;
+  				}
+
+  				.form__control::placeholder {
+					font-size: 1.2rem;
+				}
+
+				.password__checkbox {
+					text-align: left;
+					margin-left: 2.5rem;
+				}
+		}
 
 
 	</style>
@@ -293,27 +351,31 @@
 						<span>log in</span> or <span><a href="#">sign up</a></span>
 					</legend>
 
-					<div class="form__group left">
-					<label for="username" class="form__label user" >username</label>
-					<input class="form__control" type="text" id="username" placeholder="Username or email" required>
-					</div>
+					<div class="box">
 
-					<div class="form__group right">
-					<label for="password" class="form__label pass">password</label>
-					<input class="form__control" type="text" id="password" placeholder="Password" required>
-					</div>
+						<div class="form__group left">
+						<label for="username" class="form__label user" >username</label>
+						<input class="form__control" type="text" id="username" placeholder="Username or email" required>
+						</div>
 
-				<div class="password__checkbox">
-					<input type="checkbox" id="password__show" class="input__show">	
-					<label for="password__show" class ="password__show">Show Password</label>
-				</div><!---password__checkbox--->
+						<div class="form__group right">
+						<label for="password" class="form__label pass">password</label>
+						<input class="form__control" type="text" id="password" placeholder="Password" required>
+						</div>
+					</div><!--box-->
+
+					<div class="password__checkbox">
+						<input type="checkbox" id="password__show" class="input__show">	
+						<label for="password__show" class ="password__show">Show Password</label>
+					</div><!---password__checkbox--->
+				<!--fieldset-->
 				
-				</fieldset>
 
 				<div class="form__actions">
 					<a href="#" class="btn twitter">Log in widht Twitter</a>
 					<button class="btn login">Log in</button>
 				</div>
+				</fieldset>
 			</form>
 		</div><!--form-background-->
 	</div><!--form-box-->
